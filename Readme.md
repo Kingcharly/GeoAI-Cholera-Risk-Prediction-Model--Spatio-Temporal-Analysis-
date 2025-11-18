@@ -18,13 +18,13 @@ This project required merging two disparate data sources: NCDC reports (the **Ta
 
 ### 2.1. Target Variable (Y) Extraction: NCDC Reports
 
-The target data was extracted from multiple annual **NCDC Cholera Situation Reports** (e.g., 2017, 2024, 2025).
+The target data was extracted from multiple published **NCDC Cholera Situation Reports** (e.g., 2021, 2024, 2025).
 
 * **Target Selection:** Due to data incompleteness (reports only listing the "Top 14" affected LGAs), the project pivoted to a **Binary Classification** task.
     * **Positive Samples (Risk=1):** LGAs listed in the "Top 14" affected LGAs for a specific time period.
     * **Negative Samples (Risk=0):** LGAs that were *not* on the "Top 14" list for the same time period.
 * **Methodology:** A **Spatio-Temporal Panel** approach was used, creating one row per **(LGA, Time\_Period)**.
-* **Data Size:** The final dataset contains approximately **400+ rows** (20 reports $\times$ 20 LGAs), which is sufficient for robust classification modeling.
+* **Data Size:** The final dataset contains approximately **3800+ rows**, which is sufficient for robust classification modeling.
 
 ### 2.2. Feature Variable (X) Sourcing: GIS Data
 
@@ -46,6 +46,7 @@ The core of the project involved transforming raw geospatial data into meaningfu
 | :--- | :--- | :--- | :--- |
 | **Water Risk** | `NEAR_DIST_Water` | Near Analysis | Distance to contamination source (rivers, open water). |
 | **Water Risk** | `water_per_lga` | Spatial Join / Area Calculation | Concentration of water points/bodies within the LGA. |
+| **Number of Health Facitilites** | `num_health_facilities` | Spatial Join  | Concentration of healthcare within the LGA. |
 | **Density/Access**| `population_density`| Field Calculator (Pop / Area) | Strain on centralized sanitation systems. |
 | **Hybrid** | `water_density_interaction` | `water_per_lga` $\times$ `log_popdensity` | Engineered feature to find areas that are **both** dense and water-rich. |
 
@@ -61,7 +62,17 @@ The EDA focused on visually separating the `Safe (0)` and `Outbreak (1)` classes
 
 ---
 
-## 4. 🤖 Modeling & Final Steps
+### 3.3. Correlation & Predictor Validation
+
+Analysis of the correlation matrix provided the following insights:
+
+* **Primary Predictor:** The **`water_density`** feature shows the **strongest linear correlation** with the target variables (`Case` count: **+0.37**; `Has_Outbreak`: **+0.18**), confirming the hypothesis that concentrated water sources drive risk.
+* **Health Access Insight:** The distance to the nearest health facility (`NEAR_DIST_Health`) has a strong negative correlation with the outbreak status (**-0.55** with `Has_Outbreak`). This counter-intuitive finding suggests that outbreaks primarily occur in areas *with* health access (urban/peri-urban), potentially due to dense, unsanitary living conditions overwhelming nearby clinics.
+* **Feature Consolidation:** The raw features (`popdensity` and `num_health_facilities`) were found to be highly correlated with their log-transformed or per-capita counterparts. To avoid **multicollinearity**, the raw versions are dropped in the final model in favor of the stabilized, more insightful versions.
+
+---
+
+## 4. 🤖 Future Direction: Modeling & Final Steps
 
 ### 4.1. Pre-Modeling Pipeline
 
