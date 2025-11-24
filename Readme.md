@@ -72,7 +72,14 @@ Analysis of the correlation matrix provided the following insights:
 
 ---
 
-## 4. 🤖 Future Direction: Modeling & Final Steps
+## 4. Machine Learning Strategy
+
+* **Problem:** Extreme Class Imbalance (Only 3.7% of LGAs had outbreaks).
+* **Solution:** Applied **SMOTE (Synthetic Minority Over-sampling Technique)** to balance the training data.
+* **Model:** **Random Forest Classifier** with Probability Threshold Tuning.
+    * **Threshold Shift:** Lowered decision threshold from 0.5 to **0.2** to prioritize Recall (catching outbreaks) over Precision.
+
+---
 
 ### 4.1. Pre-Modeling Pipeline
 
@@ -80,11 +87,37 @@ Analysis of the correlation matrix provided the following insights:
 * **Encoding:** The `State_Name` and `LGA_Name` identifiers were removed from the feature set to prevent overfitting, though they are retained as a **DataFrame Index** for post-model interpretability.
 * **Scaling:** All final features will be normalized using **StandardScaler** to prepare them for the model.
 
-### 4.2. Modeling Strategy
+### 4.2. Modeling Performance
 
-The project employs a robust **Two-Stage Modeling** approach to handle the zero-inflation inherent in the data:
+| Metric | Score | Interpretation |
+| :--- | :--- | :--- |
+| **Recall** | **86.7%** | The model successfully identified **26 out of 30** actual outbreaks in the validation set. |
+| **Precision** | **5.1%** | Expected trade-off for a vulnerability screener. The "False Positives" represent high-risk zones that require monitoring. |
+| **Accuracy** | **35%** | Deliberately sacrificed to maximize sensitivity for public safety. |
 
-1.  **Stage 1 Model (Classification):** A **Random Forest Classifier** will be used to predict the likelihood of **`Has_Outbreak` (1/0)**.
-2.  **Stage 2 Model (Regression - Future Work):** A **Poisson** or **Zero-Inflated Negative Binomial Regressor** will be used to predict the actual **`Case_Count`** (how many cases) but runs *only* on the LGAs predicted as "1" by the first stage.
+---
 
-This approach ensures the model accurately learns both **risk initiation** (Stage 1) and **outbreak severity** (Stage 2).
+## 🗺️ Operational Results: The "Silent Risk" Hierarchy
+
+The model identified **480 vulnerable LGAs**. To make this actionable for the NCDC, I implemented a **Tiered Risk Scoring System**:
+
+| Risk Tier | Count | Recommended Action |
+| :--- | :--- | :--- |
+| **🔴 Tier 1: Critical** | **116 LGAs** | **Immediate Action:** Deploy WASH teams and oral vaccines. |
+| **🟠 Tier 2: High** | **188 LGAs** | **Priority Monitoring:** Increase surveillance frequency. |
+| **🟡 Tier 3: Moderate** | **176 LGAs** | **Routine Surveillance:** Maintain standard reporting protocols. |
+
+### 📍 Visual Output
+
+
+---
+
+## 🛠️ 5. Tech Stack
+* **GIS:** ArcGIS Pro (Spatial Join, Near Analysis, Density Calculation)
+* **Python:** Pandas, Scikit-Learn, Imbalanced-Learn (SMOTE)
+* **Visualization:** Matplotlib, Seaborn
+
+## 🚀 How to Run
+1.  Clone the repo.
+2.  Install dependencies: `pip install -r requirements.txt`
+3.  Run `notebooks/04_Modeling_RandomForest.ipynb` to retrain the model.

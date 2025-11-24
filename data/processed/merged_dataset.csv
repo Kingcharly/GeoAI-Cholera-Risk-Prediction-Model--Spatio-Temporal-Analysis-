@@ -871,7 +871,6 @@ Alkaleri,Bauchi,0.0,2024.0
 Bogoro,Bauchi,0.0,2024.0
 Dambam,Bauchi,0.0,2024.0
 Darazo,Bauchi,0.0,2024.0
-Dass,Bauchi,0.0,2024.0
 Gamawa,Bauchi,0.0,2024.0
 Giade,Bauchi,0.0,2024.0
 Itas/Gadau,Bauchi,0.0,2024.0
@@ -880,7 +879,6 @@ Katagum,Bauchi,0.0,2024.0
 Kirfi,Bauchi,0.0,2024.0
 Misau,Bauchi,0.0,2024.0
 Shira,Bauchi,0.0,2024.0
-Warji,Bauchi,0.0,2024.0
 Zaki,Bauchi,0.0,2024.0
 Ekeremor,Bayelsa,52.0,2024.0
 Kolokuma/Opokuma,Bayelsa,47.0,2024.0
@@ -931,7 +929,6 @@ Damboa,Borno,0.0,2024.0
 Dikwa,Borno,0.0,2024.0
 Gubio,Borno,0.0,2024.0
 Guzamala,Borno,0.0,2024.0
-Gwoza,Borno,0.0,2024.0
 Hawul,Borno,0.0,2024.0
 Jere,Borno,0.0,2024.0
 Kaga,Borno,0.0,2024.0
@@ -1108,19 +1105,15 @@ Auyo,Jigawa,216.0,2024.0
 Auyo,Jigawa,0.0,2024.0
 Babura,Jigawa,0.0,2024.0
 Biriniwa,Jigawa,0.0,2024.0
-Birnin Kudu,Jigawa,0.0,2024.0
 Buji,Jigawa,0.0,2024.0
-Dutse,Jigawa,0.0,2024.0
 Gagarawa,Jigawa,0.0,2024.0
 Garki,Jigawa,0.0,2024.0
 Gumel,Jigawa,0.0,2024.0
 Guri,Jigawa,0.0,2024.0
 Gwaram,Jigawa,0.0,2024.0
 Gwiwa,Jigawa,0.0,2024.0
-Hadejia,Jigawa,0.0,2024.0
 Jahun,Jigawa,0.0,2024.0
 Kafin Hausa,Jigawa,0.0,2024.0
-Kaugama,Jigawa,0.0,2024.0
 Kazaure,Jigawa,0.0,2024.0
 Kiri Kasama,Jigawa,0.0,2024.0
 Kiyawa,Jigawa,0.0,2024.0
@@ -1159,7 +1152,6 @@ Ajingi,Kano,0.0,2024.0
 Albasu,Kano,0.0,2024.0
 Bagwai,Kano,0.0,2024.0
 Bebeji,Kano,0.0,2024.0
-Bichi,Kano,0.0,2024.0
 Bunkure,Kano,0.0,2024.0
 Dala,Kano,0.0,2024.0
 Dambatta,Kano,0.0,2024.0
@@ -1467,7 +1459,6 @@ Barkin Ladi,Plateau,0.0,2024.0
 Bassa,Plateau,0.0,2024.0
 Bokkos,Plateau,0.0,2024.0
 Jos East,Plateau,0.0,2024.0
-Jos North,Plateau,0.0,2024.0
 Jos South,Plateau,0.0,2024.0
 Kanam,Plateau,0.0,2024.0
 Kanke,Plateau,0.0,2024.0
@@ -1509,7 +1500,6 @@ Bodinga,Sokoto,0.0,2024.0
 Gada,Sokoto,0.0,2024.0
 Goronyo,Sokoto,0.0,2024.0
 Gudu,Sokoto,0.0,2024.0
-Illela,Sokoto,0.0,2024.0
 Isa,Sokoto,0.0,2024.0
 Kebbe,Sokoto,0.0,2024.0
 Kware,Sokoto,0.0,2024.0
@@ -1517,7 +1507,6 @@ Rabah,Sokoto,0.0,2024.0
 Sabon Birni,Sokoto,0.0,2024.0
 Shagari,Sokoto,0.0,2024.0
 Silame,Sokoto,0.0,2024.0
-Sokoto North,Sokoto,0.0,2024.0
 Sokoto South,Sokoto,0.0,2024.0
 Tambuwal,Sokoto,0.0,2024.0
 Tangaza,Sokoto,0.0,2024.0
@@ -3228,10 +3217,12 @@ Toro,Bauchi,0.0,2021.0
 Warji,Bauchi,0.0,2021.0
 Zaki,Bauchi,0.0,2021.0
 Bauchi,Bauchi,9336.0,2021.0
+Dass,Bauchi,605.0,2021.0
 Ganjuwa,Bauchi,1311.0,2021.0
-Ningi,Bauchi,860.0,2021.0
+Ningi,Bauchi,861.0,2021.0
 Tafawa-Balewa,Bauchi,1107.0,2021.0
 Toro,Bauchi,1921.0,2021.0
+Warji,Bauchi,691.0,2021.0
 Brass,Bayelsa,0.0,2021.0
 Ekeremor,Bayelsa,0.0,2021.0
 Kolokuma/Opokuma,Bayelsa,0.0,2021.0
@@ -3279,6 +3270,7 @@ Mobbar,Borno,0.0,2021.0
 Monguno,Borno,0.0,2021.0
 Nganzai,Borno,0.0,2021.0
 Shani,Borno,0.0,2021.0
+Gwoza,Borno,960.0,2021.0
 Maiduguri,Borno,1658.0,2021.0
 Abi,Cross River,0.0,2021.0
 Akamkpa,Cross River,0.0,2021.0
@@ -3450,6 +3442,10 @@ Ringim,Jigawa,0.0,2021.0
 Roni,Jigawa,0.0,2021.0
 Taura,Jigawa,0.0,2021.0
 Yankwashi,Jigawa,0.0,2021.0
+Birnin Kudu,Jigawa,970.0,2021.0
+Dutse,Jigawa,3073.0,2021.0
+Hadejia,Jigawa,3060.0,2021.0
+Kaugama,Jigawa,670.0,2021.0
 Birnin Gwari,Kaduna,0.0,2021.0
 Chikun,Kaduna,0.0,2021.0
 Giwa,Kaduna,0.0,2021.0
@@ -3516,6 +3512,7 @@ Tudun Wada,Kano,0.0,2021.0
 Ungogo,Kano,0.0,2021.0
 Warawa,Kano,0.0,2021.0
 Wudil,Kano,0.0,2021.0
+Bichi,Kano,837.0,2021.0
 Sumaila,Kano,1923.0,2021.0
 Bakori,Katsina,0.0,2021.0
 Batagarawa,Katsina,0.0,2021.0
@@ -3782,6 +3779,7 @@ Qua'An Pan,Plateau,0.0,2021.0
 Riyom,Plateau,0.0,2021.0
 Shendam,Plateau,0.0,2021.0
 Wase,Plateau,0.0,2021.0
+Jos North,Plateau,614.0,2021.0
 Abua/Odual,Rivers,0.0,2021.0
 Ahoada East,Rivers,0.0,2021.0
 Ahoada West,Rivers,0.0,2021.0
@@ -3829,6 +3827,8 @@ Wurno,Sokoto,0.0,2021.0
 Yabo,Sokoto,0.0,2021.0
 Dange Shuni,Sokoto,958.0,2021.0
 Gwadabawa,Sokoto,969.0,2021.0
+Illela,Sokoto,722.0,2021.0
+Sokoto North,Sokoto,642.0,2021.0
 Ardo-Kola,Taraba,0.0,2021.0
 Donga,Taraba,0.0,2021.0
 Gashaka,Taraba,0.0,2021.0
@@ -3857,6 +3857,7 @@ Tarmuwa,Yobe,0.0,2021.0
 Yunusari,Yobe,0.0,2021.0
 Yusufari,Yobe,0.0,2021.0
 Damaturu,Yobe,896.0,2021.0
+Damaturu,Yobe,800.0,2021.0
 Anka,Zamfara,0.0,2021.0
 Bakura,Zamfara,0.0,2021.0
 Birnin Magaji-Kiyaw,Zamfara,0.0,2021.0
