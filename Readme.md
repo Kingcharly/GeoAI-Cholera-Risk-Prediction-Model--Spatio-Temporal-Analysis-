@@ -109,6 +109,7 @@ The model identified **480 vulnerable LGAs**. To make this actionable for the NC
 
 ### 📍 Visual Output
 
+![alt text](<Vulnerability Map.jpg>)
 
 ---
 
